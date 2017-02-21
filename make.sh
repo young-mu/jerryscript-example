@@ -1,0 +1,21 @@
+gcc ~/Github/jerryscript/build/jerry-all-in.c test.c \
+    -I ~/Github/jerryscript/targets/default \
+    -I ~/Github/jerryscript/jerry-core \
+    -I ~/Github/jerryscript/jerry-core/jrt \
+    -I ~/Github/jerryscript/jerry-core/lit \
+    -I ~/Github/jerryscript/jerry-core/jmem \
+    -I ~/Github/jerryscript/jerry-core/jcontext \
+    -I ~/Github/jerryscript/jerry-core/ecma/builtin-objects \
+    -I ~/Github/jerryscript/jerry-core/ecma/builtin-objects/typedarray \
+    -I ~/Github/jerryscript/jerry-core/ecma/base \
+    -I ~/Github/jerryscript/jerry-core/debugger \
+    -I ~/Github/jerryscript/jerry-core/parser/regexp \
+    -I ~/Github/jerryscript/jerry-core/vm \
+    -I ~/Github/jerryscript/jerry-core/parser/js \
+    -I ~/Github/jerryscript/jerry-core/ecma/operations \
+    ~/Github/jerryscript/build/lib/libjerry-libm.a \
+    -DJMEM_STATS \
+    -DJERRY_JS_PARSER \
+    -DJERRY_ENABLE_SNAPSHOT_SAVE \
+    -DJERRY_ENABLE_SNAPSHOT_EXEC \
+    -DCONFIG_MEM_HEAP_AREA_SIZE=160*1024
